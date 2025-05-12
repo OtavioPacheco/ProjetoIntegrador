@@ -1,0 +1,64 @@
+body{
+    background-image: url('../icons/imagem_fundo.jpg');
+    background-size: cover;      
+    background-repeat: no-repeat; 
+    background-position: center;  
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    margin-top: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+.container h1{
+    font-size: 55px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fafafa;
+}
+
+.container img{
+    width: 100px;
+    height: 100px;
+}
+
+.container input{
+    width: 250px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+.container input:focus{
+        border-color: #000000;
+        box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+#button{
+    margin-top: 70px;
+    padding-top: 10px;
+    background-color: #fafafa;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100px;
+}
+
+#button:hover {
+    background-color: #5c5c5c;
+  }
