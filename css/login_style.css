@@ -62,3 +62,7 @@ body{
 #button:hover {
     background-color: #5c5c5c;
   }
+
+  p{
+    color: #fafafa;
+  }
