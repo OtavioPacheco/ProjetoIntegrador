@@ -113,3 +113,47 @@
   #auth-button.login:hover {
     background-color: #084ec9;
   }
+
+  .card-descricao {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-descricao.hidden {
+    display: none;
+  }
+  
+  .card-descricao h2 {
+    margin-bottom: 10px;
+    color: #ffcc00;
+  }
+  
+  .card-descricao button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .imagem-jogo {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  

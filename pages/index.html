@@ -15,8 +15,8 @@
       </div>
     <nav>
       <ul>
-        <li><a href="#">Loja</a></li>
-        <li><a href="#">Comunidade</a></li>
+        <li><a href="planos.html">Planos</a></li>
+        <li><a href="chat.html">Comunidade</a></li>
       </ul>
     </nav>
     <input type="text" placeholder="Pesquisar" class="search-bar">
@@ -25,19 +25,72 @@
 
   <main>
     <div class="games-grid">
-      <div class="game"><img src="../icons/index_icons/fifa-98-na.png" alt="FIFA 98"></div>
-      <div class="game"><img src="../icons/index_icons/bomba.png" alt="Bomba 2025"></div>
-      <div class="game"><img src="../icons/index_icons/gtaBR.png" alt="GTA Brasil"></div>
-      <div class="game"><img src="../icons/index_icons/gtaRio.png" alt="GTA"></div>
-      <div class="game"><img src="../icons/index_icons/callOFBR.png" alt="Call of Duty Brasil"></div>
+      <div class="game"><img src="../icons/index_icons/fifa-98-na.png" alt="FIFA 98"
+      data-nome="FIFA 98"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."
+      ></div>
+      <div class="game"><img src="../icons/index_icons/bomba.png" alt="Bomba 2025"
+      data-nome="Bomba 2025"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/gtaBR.png" alt="GTA Brasil"
+        data-nome="GTABR"
+        data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/gtaRio.png" alt="GTA"
+        data-nome="GTARio"
+        data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/callOFBR.png" alt="Call of Duty Brasil"
+      data-nome="Call of Duty Brasil"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
 
-      <div class="game"><img src="../icons/index_icons/fifaStreeat.png" alt="FIFA Street"></div>
-      <div class="game"><img src="../icons/index_icons/ronaldinhoSoccer.png" alt="Ronaldinho 97"></div>
-      <div class="game"><img src="../icons/index_icons/needForBr.png" alt="NFS Most Wanted BR"></div>
-      <div class="game"><img src="../icons/index_icons/mineirinho.png" alt="Miner Adventure"></div>
-      <div class="game"><img src="../icons/index_icons/crash.png" alt="Crash"></div>
+      <div class="game"><img src="../icons/index_icons/fifaStreeat.png" alt="FIFA Street"
+      data-nome="Fifa Street"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/ronaldinhoSoccer.png" alt="Ronaldinho 97"
+        data-nome="Ronaldinho"
+        data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/needForBr.png" alt="NFS Most Wanted BR"
+        data-nome="needForBr"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/mineirinho.png" alt="Miner Adventure"
+        data-nome="Mineirinho"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
+      <div class="game"><img src="../icons/index_icons/crash.png" alt="Crash"
+        data-nome="Crash"
+      data-descricao="Clássico do futebol retrô com jogadores lendários."></div>
     </div>
   </main>
+  <div id="descricao-card" class="card-descricao hidden">
+    <img id="imagem-jogo" src="" alt="" class="imagem-jogo">
+    <h2 id="titulo-jogo"></h2>
+    <p id="texto-descricao"></p>
+    <button onclick="fecharDescricao()">Fechar</button>
+  </div>
+  
   <script src="../js/index_script.js"></script>
+  <script>
+    document.querySelectorAll('.game img').forEach(img => {
+  img.addEventListener('click', () => {
+    const nome = img.getAttribute('data-nome');
+    const descricao = img.getAttribute('data-descricao');
+    const src = img.getAttribute('src');
+    const alt = img.getAttribute('alt');
+
+    document.getElementById('titulo-jogo').textContent = nome;
+    document.getElementById('texto-descricao').textContent = descricao;
+
+    const imagem = document.getElementById('imagem-jogo');
+    imagem.setAttribute('src', src);
+    imagem.setAttribute('alt', alt);
+
+    document.getElementById('descricao-card').classList.remove('hidden');
+  });
+});
+
+function fecharDescricao() {
+  document.getElementById('descricao-card').classList.add('hidden');
+}
+
+
+  </script>
 </body>
 </html>
