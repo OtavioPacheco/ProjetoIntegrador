@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #000;
+  }
+
+  #voltarLink {
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
+  #voltarLink:hover {
+    background-color: #ffb300;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .plan {
+    margin-top: 70px;
+    background: #666;
+    color: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 300px;
+    height: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: relative;
+  }
+  
+  .plan.destaque {
+    background: #666;
+    color: #fff;
+  }
+  
+  .plan .tag {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    background: #00c853;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 20px 20px 0 0;
+    font-weight: bold;
+  }
+  
+  .plan h2 {
+    color: #ffca28;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .plan.destaque h2 {
+    color: #ffca28;
+  }
+  
+  .plan p {
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  button {
+    background: #ffd600;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pacote {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  .plan ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .plan ul li {
+    margin: 0.5rem 0;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .unavailable {
+    color: red;
+  }
+
+  

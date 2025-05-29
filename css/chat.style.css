@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #2f3136; /* estilo Discord */
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #voltar {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background-color: #ffcc00;
+    color: black;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 2;
+  }
+  
+  #voltar:hover {
+    background-color: #ffb300;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 60px;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .message {
+    max-width: 60%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  .message.bot {
+    background-color: #40444b;
+    align-self: flex-start;
+  }
+  
+  .message.user {
+    background-color: #7289da;
+    color: white;
+    align-self: flex-end;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 16px;
+    background-color: #36393f;
+    border-top: 1px solid #202225;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #40444b;
+    color: white;
+    outline: none;
+  }
+  
+  .chat-input button {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background-color: #43b581;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .chat-input button:hover {
+    background-color: #3aa874;
+  }
+  
