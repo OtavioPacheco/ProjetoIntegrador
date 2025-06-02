@@ -99,3 +99,65 @@
     background-color: #3aa874;
   }
   
+  @media (max-width: 768px) {
+    .message {
+      max-width: 80%;
+      font-size: 0.95em;
+    }
+  
+    .chat-input {
+      flex-direction: column;
+      padding: 12px;
+    }
+  
+    .chat-input input {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+  
+    .chat-input button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+    }
+  
+    #voltar {
+      padding: 6px 12px;
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .message {
+      max-width: 100%;
+      font-size: 0.9em;
+    }
+  
+    .chat-messages {
+      padding: 12px;
+      gap: 10px;
+    }
+  
+    .chat-input {
+      padding: 10px;
+    }
+  
+    .chat-input input {
+      padding: 10px;
+      font-size: 0.95em;
+    }
+  
+    .chat-input button {
+      padding: 10px;
+      font-size: 0.95em;
+    }
+  
+    #voltar {
+      top: 10px;
+      left: 10px;
+      padding: 5px 10px;
+      font-size: 0.85em;
+    }
+  }
+  
