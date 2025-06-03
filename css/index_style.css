@@ -122,51 +122,80 @@
   }
 
   .card-descricao {
-    position: fixed;
+    position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(145deg, #1a1a1a, #2e2e2e); 
+    color: #fff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.8),
+      inset 0 0 10px rgba(255, 204, 0, 0.3);
     z-index: 999;
-    width: 300px;
-    max-height: 450px;
+    width: 30%;
+    max-width: 350px;
+    max-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    height: 80%;
-    position: absolute;
-  }
-  
-  .card-descricao.hidden {
+    overflow-y: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-descricao:hover {
+    transform: translate(-50%, -50%) scale(1.03);
+    box-shadow:
+      0 12px 30px rgba(255, 204, 0, 0.9),
+      inset 0 0 15px rgba(255, 204, 0, 0.5);
+}
+
+.card-descricao.hidden {
     display: none;
-  }
-  
-  .card-descricao h2 {
-    margin-bottom: 10px;
+}
+
+.card-descricao h2 {
+    margin-bottom: 15px;
     color: #ffcc00;
-  }
-  
-  .card-descricao button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 0 5px #ffcc00;
+    font-weight: 700;
+}
+
+.card-descricao button {
     margin-top: 30px;
-    padding: 8px 16px;
+    padding: 12px 25px;
     background-color: #ffcc00;
-    color: black;
+    color: #222;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-  }
-  
-  .imagem-jogo {
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-descricao button:hover {
+    background-color: #00e645;
+    color: #111;
+    box-shadow: 0 6px 16px rgba(230, 184, 0, 0.9);
+}
+
+.imagem-jogo {
     width: 100%;
-    max-width: 220px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-  }
+    max-width: 240px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.imagem-jogo:hover {
+    transform: scale(1.05);
+}
+
   
   @media (max-width: 1024px) {
     .games-grid {
