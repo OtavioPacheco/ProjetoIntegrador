@@ -1,3 +1,12 @@
+//--------------------------------------------------------------------------------------------------\\
+//Para funcionar é necessário que use em local server, o navegador nao suporta a estrutura de pastas
+//--------------------------------------------------------------------------------------------------\\
+
+//Comandos para subir em local server
+//cd local_do_projeto
+//python -m http.server
+//é necessário que python esteja instalado
+
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.getElementById("button");
   
@@ -6,11 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const password = document.getElementById("password").value.trim();
   
       if (email && password) {
-        // 1. Salva o e-mail no localStorage
         localStorage.setItem("userEmail", email);
   
-        // 2. Redireciona para a página principal
-        window.location.href = "../pages/index.html"; // ajuste o caminho se necessário
+        window.location.href = "../pages/index.html"; 
       } else {
         alert("Por favor, preencha o e-mail e a senha.");
       }
