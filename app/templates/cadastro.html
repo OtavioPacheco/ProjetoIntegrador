@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastro.css') }}">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro</h2>
+
+    <!-- Form SEM action (para usar fetch) -->
+    <form id="form-cadastro" method="POST">
+      <div class="form-group">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" required />
+      </div>
+
+      <button type="submit" id="btn-cadastrar" class="submit-button">Cadastrar</button>
+    </form>
+
+    <div class="voltar-link">
+      <a href="{{ url_for('main.index') }}">← Voltar</a>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/cadastro_script.js') }}"></script>
+</body>
+</html>

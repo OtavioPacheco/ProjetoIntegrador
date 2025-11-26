@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat - Estilo Discord</title>
+  <link rel="stylesheet" href="../static/css/chat.style.css">
+</head>
+<body>
+  <a href="{{ url_for('main.index') }}" id="voltar">Voltar</a>
+
+  <div class="chat-container">
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">Olá! 👋 Como podemos te ajudar hoje?</div>
+      <div class="message user">Gostaria de saber mais sobre o Plano Deluxe.</div>
+      <div class="message bot">Claro! O plano Deluxe oferece mais de 2.000 jogos gratuitos, promoções exclusivas e muito mais!</div>
+      <div class="message user">Tem desconto para estudantes?</div>
+      <div class="message bot">Sim! Estudantes têm 20% de desconto no primeiro ano. 😄</div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="mensagem" placeholder="Digite sua mensagem...">
+      <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    function enviarMensagem() {
+      const input = document.getElementById('mensagem');
+      const texto = input.value.trim();
+      if (texto !== '') {
+        const chat = document.getElementById('chatMessages');
+        const novaMensagem = document.createElement('div');
+        novaMensagem.className = 'message user';
+        novaMensagem.textContent = texto;
+        chat.appendChild(novaMensagem);
+        input.value = '';
+        chat.scrollTop = chat.scrollHeight;
+      }
+    }
+
+    document.getElementById('mensagem').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') enviarMensagem();
+    });
+  </script>
+</body>
+</html>
