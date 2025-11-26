@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>BR Games</title>
+  <link rel="stylesheet" href="../css/index_style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <header>
+      <div><img src="../icons/index_icons/icone_principal.png" alt="Logo BR Games" class="logo"></div>
+      <nav>
+        <ul>
+          <li><a href="planos.html">Planos</a></li>
+          <li><a href="chat.html">Comunidade</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+      <input type="text" placeholder="Pesquisar" class="search-bar">
+      <div class="d-flex align-items-center gap-1">
+        <i class="bi bi-person"></i>
+        <span id="user-name"></span>
+      </div>
+    <button id="auth-button"></button>
+  </header>
+
+  <main>
+    <div class="games-grid">
+      <div class="game"><img src="../icons/index_icons/fifa-98-na.png" alt="FIFA 98"
+        data-nome="FIFA 98"
+        data-descricao="Um clássico do futebol com gráficos nostálgicos e jogabilidade retrô."></div>
+    
+      <div class="game"><img src="../icons/index_icons/bomba.png" alt="Bomba 2025"
+        data-nome="Bomba 2025"
+        data-descricao="PES modificado com times brasileiros e narração animada."></div>
+    
+      <div class="game"><img src="../icons/index_icons/gtaBR.png" alt="GTA Brasil"
+        data-nome="GTA BR"
+        data-descricao="Versão brasileira do GTA com elementos da cultura urbana nacional."></div>
+    
+      <div class="game"><img src="../icons/index_icons/gtaRio.png" alt="GTA"
+        data-nome="GTA Rio"
+        data-descricao="Explore o Rio de Janeiro em uma adaptação do clássico GTA."></div>
+    
+      <div class="game"><img src="../icons/index_icons/callOFBR.png" alt="Call of Duty Brasil"
+        data-nome="Call of Duty Brasil"
+        data-descricao="Ação intensa em território brasileiro com armas e mapas únicos."></div>
+    
+      <div class="game"><img src="../icons/index_icons/fifaStreeat.png" alt="FIFA Street"
+        data-nome="FIFA Street"
+        data-descricao="Futebol de rua com dribles estilosos e partidas eletrizantes."></div>
+    
+      <div class="game"><img src="../icons/index_icons/ronaldinhoSoccer.png" alt="Ronaldinho 97"
+        data-nome="Ronaldinho Soccer 97"
+        data-descricao="Jogo icônico estrelado por Ronaldinho Gaúcho em seus tempos de ouro."></div>
+    
+      <div class="game"><img src="../icons/index_icons/needForBr.png" alt="NFS Most Wanted BR"
+        data-nome="Need for Speed BR"
+        data-descricao="Corridas clandestinas no Brasil com carros tunados e perseguições."></div>
+    
+      <div class="game"><img src="../icons/index_icons/mineirinho.png" alt="Miner Adventure"
+        data-nome="Mineirinho Aventuras"
+        data-descricao="Jogo bizarro e cômico com o lendário Mineirinho em missões absurdas."></div>
+    
+      <div class="game"><img src="../icons/index_icons/crash.png" alt="Crash"
+        data-nome="Crash Bandicoot"
+        data-descricao="Aventura clássica com o marsupial mais carismático dos games."></div>
+    </div>
+    
+  </main>
+  <div id="descricao-card" class="card-descricao hidden">
+    <img id="imagem-jogo" src="" alt="" class="imagem-jogo">
+    <h2 id="titulo-jogo"></h2>
+    <p id="texto-descricao"></p>
+    <button>Comprar</button>
+    <button onclick="fecharDescricao()">Fechar</button>
+  </div>
+  
+  <script src="../js/index_script.js"></script>
+  <script>
+    document.querySelectorAll('.game img').forEach(img => {
+  img.addEventListener('click', () => {
+    const nome = img.getAttribute('data-nome');
+    const descricao = img.getAttribute('data-descricao');
+    const src = img.getAttribute('src');
+    const alt = img.getAttribute('alt');
+
+    document.getElementById('titulo-jogo').textContent = nome;
+    document.getElementById('texto-descricao').textContent = descricao;
+
+    const imagem = document.getElementById('imagem-jogo');
+    imagem.setAttribute('src', src);
+    imagem.setAttribute('alt', alt);
+
+    document.getElementById('descricao-card').classList.remove('hidden');
+  });
+});
+
+function fecharDescricao() {
+  document.getElementById('descricao-card').classList.add('hidden');
+}
+
+
+  </script>
+</body>
+</html>
