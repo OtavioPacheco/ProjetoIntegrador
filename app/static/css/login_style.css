@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #36393f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* Container principal */
+.container {
+    background-color: #36393f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    width: 100%;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffcc00;
+    font-size: 28px;
+}
+
+.container img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 6px;
+    background-color: #40444b;
+
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+}
+
+.container input:focus {
+    outline: 2px solid #7289da;
+}
+
+/* Botão */
+#button {
+    width: 100%;
+    margin-top: 25px;
+
+    padding: 12px;
+    background-color: #43b581;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+#button:hover {
+    background-color: #3aa874;
+}
+
+/* Links / textos */
+p {
+    color: #ffcc00;
+    margin-top: 20px;
+    font-size: 0.95em;
+    cursor: pointer;
+    text-align: center;
+}
+
+p:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+
+    .container input,
+    #button {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+}

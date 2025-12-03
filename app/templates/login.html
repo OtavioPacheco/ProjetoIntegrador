@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login_style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- JS carregado após o HTML -->
+    <script defer src="{{ url_for('static', filename='js/login_script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='icons/login_icons/do-utilizador.png') }}" alt="imagem.png">
+        <h1>Login</h1>
+
+        <!-- FORM PARA LOGIN -->
+        <form id="form-login">
+            <input type="email" id="email" placeholder="Digite seu email:" required>
+            <input type="password" id="password" placeholder="Digite sua senha:" required>
+
+            <p><i class="bi bi-link-45deg"></i>Esqueci a senha</p>
+
+            <!-- BOTÃO COM URL DA HOME -->
+            <input type="submit" 
+                   id="button"
+                   value="Entrar"
+                   data-url-home="{{ url_for('main.index') }}">
+        </form>
+    </div>
+</body>
+</html>

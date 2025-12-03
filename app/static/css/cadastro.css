@@ -1,0 +1,107 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #2f3136;
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #36393f;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffcc00;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
+
+        .form-group input {
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            background-color: #40444b;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        .form-group input:focus {
+            outline: 2px solid #7289da;
+        }
+
+        .div-button {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .submit-button,
+        .back-button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-button {
+            background-color: #43b581;
+            color: white;
+        }
+
+        .submit-button:hover {
+            background-color: #3aa874;
+        }
+
+        .back-button {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        .back-button:hover {
+            background-color: #e6b800;
+        }
+
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+            }
+
+            .form-group input,
+            .submit-button,
+            .back-button {
+                font-size: 0.95em;
+                padding: 10px;
+            }}

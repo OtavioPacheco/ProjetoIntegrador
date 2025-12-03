@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #2f3136;
+  color: #ffffff;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #36393f;
+  padding: 12px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+
+.logo {
+  width: 150px;
+  height: 90px;
+  object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #40444b;
+  color: #ffcc00;
+}
+
+/* ================= SEARCH ================= */
+
+.search-bar {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  width: 200px;
+  background-color: #40444b;
+  color: white;
+  font-size: 1em;
+}
+
+.search-bar:focus {
+  outline: 2px solid #7289da;
+}
+
+/* ================= MAIN ================= */
+
+main {
+  padding: 30px 20px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.game img {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  margin-top: 80px;
+  object-fit: cover;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+}
+
+.game img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255,204,0,0.3);
+}
+
+/* ================= FOOTER ================= */
+
+.rodape {
+  background-color: #36393f;
+  width: 100%;
+  padding: 20px;
+}
+
+/* ================= USER ================= */
+
+#user-name {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* ================= BOTÕES ================= */
+
+#logout-button {
+  padding: 8px 16px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#logout-button:hover {
+  background-color: #b02a37; 
+}
+
+#auth-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#auth-button.login {
+  background-color: #43b581;
+  color: white;
+}
+
+#auth-button.login:hover {
+  background-color: #3aa874;
+}
+
+/* ================= CARD ================= */
+
+.card-descricao {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #36393f;
+  color: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.8),
+    inset 0 0 8px rgba(255, 204, 0, 0.2);
+  z-index: 999;
+  width: 30%;
+  max-width: 350px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  transition: 0.3s ease;
+}
+
+.card-descricao:hover {
+  transform: translate(-50%, -50%) scale(1.03);
+  box-shadow:
+    0 12px 30px rgba(255, 204, 0, 0.8),
+    inset 0 0 12px rgba(255, 204, 0, 0.4);
+}
+
+.card-descricao.hidden {
+  display: none;
+}
+
+.card-descricao h2 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00;
+}
+
+/* Botão da card */
+.card-descricao button {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #43b581;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  transition: 0.2s ease;
+}
+
+.card-descricao button:hover {
+  background-color: #3aa874;
+}
+
+/* Imagem da card */
+.imagem-jogo {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transition: transform 0.2s ease;
+}
+
+.imagem-jogo:hover {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .game img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .search-bar {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game img {
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+  }
+
+  #user-name {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-descricao {
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  #logout-button,
+  #auth-button {
+    width: 100%;
+  }
+}
